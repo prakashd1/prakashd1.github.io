@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash Dayaramani | Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --button-bg: #ffffff;
+            --button-text: #1f2937;
+            --button-hover-bg: #f3f4f6;
+            --primary: #004a99;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --avatar-bg: #004a99;
+            --avatar-text: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--button-text);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            /* Mobile-first constraint */
+            text-align: center;
+        }
+
+        /* Avatar Section */
+        .profile-header {
+            margin-bottom: 2rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .avatar {
+            width: 96px;
+            height: 96px;
+            background-color: var(--avatar-bg);
+            color: var(--avatar-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border: 4px solid #fff;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem;
+            color: #111827;
+        }
+
+        p.bio {
+            font-size: 1rem;
+            color: #4b5563;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Link Buttons */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Centered text */
+            position: relative;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: 50px;
+            /* Pill shape */
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .link-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            background-color: var(--button-hover-bg);
+        }
+
+        .link-btn i {
+            position: absolute;
+            left: 24px;
+            font-size: 1.25rem;
+        }
+
+        /* Icon Colors */
+        .fa-linkedin-in {
+            color: #0077b5;
+        }
+
+        .fa-github {
+            color: #333;
+        }
+
+        .fa-x-twitter {
+            color: #000;
+        }
+
+        .fa-facebook-f {
+            color: #1877f2;
+        }
+
+        .fa-envelope {
+            color: #ea4335;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            animation: fadeIn 1s ease-out 0.5s backwards;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Dark Mode Support (Optional but nice) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-gradient: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+                --button-bg: rgba(255, 255, 255, 0.05);
+                /* Glassy dark */
+                --button-text: #f9fafb;
+                --button-hover-bg: rgba(255, 255, 255, 0.1);
+                --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+            }
+
+            body {
+                color: #f9fafb;
+            }
+
+            h1 {
+                color: #ffffff;
+            }
+
+            p.bio {
+                color: #d1d5db;
+            }
+
+            .link-btn {
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .avatar {
+                border-color: #374151;
+            }
+
+            .fa-github {
+                color: #fff;
+            }
+
+            .fa-x-twitter {
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="profile-header">
+            <div class="avatar">PD</div>
+            <h1>Prakash Dayaramani</h1>
+            <p class="bio">Vice President | Technology Leader</p>
+        </header>
+
+        <nav class="links">
+            <a href="https://www.linkedin.com/in/prakashd1/" target="_blank" class="link-btn">
+                <i class="fab fa-linkedin-in"></i>
+                Connect on LinkedIn
+            </a>
+
+            <a href="https://github.com/prakashd1" target="_blank" class="link-btn">
+                <i class="fab fa-github"></i>
+                Check out my Code
+            </a>
+
+            <a href="https://x.com/prakashd1" target="_blank" class="link-btn">
+                <i class="fa-brands fa-x-twitter"></i>
+                Follow me on X
+            </a>
+
+            <a href="https://facebook.com/prakashd1" target="_blank" class="link-btn">
+                <i class="fab fa-facebook-f"></i>
+                Connect on Facebook
+            </a>
+
+            <a href="mailto:prakash.dayaramani@gmail.com" class="link-btn">
+                <i class="fas fa-envelope"></i>
+                Send me an Email
+            </a>
+        </nav>
+
+        <footer>
+            <p>&copy; 2026 Prakash Dayaramani</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
